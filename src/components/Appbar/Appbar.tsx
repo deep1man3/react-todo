@@ -1,7 +1,7 @@
-import React from "react";
+import React, {FC} from "react";
 
-const Appbar = () => {
-  return <div>AppBar</div>;
+const Appbar: FC = ({children}) => {
+  return <div>AppBar - {children}</div>;
 };
 
 export default Appbar;
