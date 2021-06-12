@@ -1,9 +1,10 @@
-import { publicRoutes } from "./public.routes";
-import DefaultLayout from "../layouts/DefaultLayout";
+import { publicRoutes } from './public.routes';
+import DefaultLayout from '../layouts/DefaultLayout';
+import { RootRouteProperties } from '../types/routes.types';
 
-const rootRoutes = [
+const rootRoutes: RootRouteProperties[] = [
   {
-    routes: publicRoutes,
+    routesList: publicRoutes,
     layout: DefaultLayout,
   },
 ];

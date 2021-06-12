@@ -8,7 +8,7 @@ const Router = () => {
     <BrowserRouter>
       <Switch>
         {rootRoutes.map((rootRoute) => {
-          const { routes: routesList, layout } = rootRoute;
+          const { routesList, layout } = rootRoute;
           {
             return routesList.map((appRoute) => (
               <Route
