@@ -1,7 +1,7 @@
 import { publicRoutes } from './public.routes';
 import DefaultLayout from '../layouts/DefaultLayout';
 import { RootRouteProperties } from '../types/routes.types';
-import { privateRoutes } from "./private.routes";
+import { privateRoutes } from './private.routes';
 
 const rootRoutes: RootRouteProperties[] = [
   {
@@ -11,7 +11,7 @@ const rootRoutes: RootRouteProperties[] = [
   {
     routesList: privateRoutes,
     layout: DefaultLayout,
-  }
+  },
 ];
 
 export default rootRoutes;

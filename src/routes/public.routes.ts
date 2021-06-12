@@ -1,11 +1,11 @@
-import Home from "../pages/Home";
-import { RouteProperties } from "../types/routes.types";
+import Home from '../pages/Home';
+import { RouteProperties } from '../types/routes.types';
 
 export const publicRoutes: RouteProperties[] = [
   {
-    label: "Главная",
+    label: 'Главная',
     exact: true,
-    path: "/",
+    path: '/',
     page: Home,
   },
 ];
