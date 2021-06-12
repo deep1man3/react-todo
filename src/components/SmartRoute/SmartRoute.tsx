@@ -20,10 +20,17 @@ const SmartRoute: FC<SmartRouterProperties> = ({
 
   const authenticated = false;
 
+  /**
+   * Если маршрут приватный и пользователь не авторизован,
+   * выводить 403 ошибку
+   */
   if (isPrivateRoute(privacy) && !authenticated) {
     return <Layout Page={Error403} route={route} />
   }
 
+  /**
+   * Если маршрут публичный
+   */
   return <Layout Page={appRoute.page} route={route} />;
 };
 
