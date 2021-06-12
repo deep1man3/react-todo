@@ -26,7 +26,7 @@ const Router = () => {
             ));
           }
         })}
-        ;<Route>404</Route>
+        <Route>404</Route>
       </Switch>
     </BrowserRouter>
   );
