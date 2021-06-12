@@ -9,7 +9,7 @@ interface SmartRouterProperties<T = ReactNode> {
   route: RouteComponentProps<T>;
 }
 
-const SmartRouter: FC<SmartRouterProperties> = ({
+const SmartRoute: FC<SmartRouterProperties> = ({
   appRoute,
   layout: Layout,
   route,
@@ -17,4 +17,4 @@ const SmartRouter: FC<SmartRouterProperties> = ({
   return <Layout Page={appRoute.page} route={route} />;
 };
 
-export default SmartRouter;
+export default SmartRoute;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import rootRoutes from '../../routes';
-import SmartRouter from '../SmartRouter/SmartRouter';
+import SmartRoute from '../SmartRoute';
 
 const Router = () => {
   return (
@@ -16,7 +16,7 @@ const Router = () => {
                 exact={appRoute.exact}
                 path={appRoute.path}
                 render={(route) => (
-                  <SmartRouter
+                  <SmartRoute
                     route={route}
                     layout={layout}
                     appRoute={appRoute}
