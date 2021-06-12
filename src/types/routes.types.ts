@@ -4,5 +4,5 @@ export interface RouteProperties {
     label: string;
     path: string;
     exact?: boolean;
-    layout?: FC;
+    page?: FC;
 }
