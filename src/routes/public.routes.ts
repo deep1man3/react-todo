@@ -1,5 +1,5 @@
 import Home from "../pages/Home";
-import {RouteProperties} from "../types/routes.types";
+import { RouteProperties } from "../types/routes.types";
 
 export const publicRoutes: RouteProperties[] = [
   {
