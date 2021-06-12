@@ -18,9 +18,12 @@ export interface RootRouteProperties {
 export enum PrivacyType {
   Public = 'Public',
   Private = 'Private',
+  Session = 'Session',
 }
 
 export const isPublicRoute = (privacy: PrivacyType) =>
   privacy === PrivacyType.Public;
 export const isPrivateRoute = (privacy: PrivacyType) =>
   privacy === PrivacyType.Private;
+export const isSessionRoute = (privacy: PrivacyType) =>
+  privacy === PrivacyType.Session;
