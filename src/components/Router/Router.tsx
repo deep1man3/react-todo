@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Error404 from '../../pages/Error404';
 import rootRoutes from '../../routes';
 import SmartRoute from '../SmartRoute';
 
@@ -8,7 +9,7 @@ const Router = () => {
     <BrowserRouter>
       <Switch>
         {rootRoutes.map((rootRoute) => {
-          const { routesList, layout } = rootRoute;
+          const { routesList, layout, privacy } = rootRoute;
           {
             return routesList.map((appRoute) => (
               <Route
@@ -20,13 +21,16 @@ const Router = () => {
                     route={route}
                     layout={layout}
                     appRoute={appRoute}
+                    privacy={privacy}
                   />
                 )}
               />
             ));
           }
         })}
-        <Route>404</Route>
+        <Route>
+          <Error404 />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
