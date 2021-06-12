@@ -2,7 +2,7 @@ import Home from "../pages/Home";
 
 export const publicRoutes = [
   {
-    title: "Главная",
+    label: "Главная",
     exact: true,
     path: "/",
     page: Home,
