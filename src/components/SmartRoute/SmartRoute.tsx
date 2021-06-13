@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { Redirect, RouteComponentProps } from 'react-router-dom';
 import { LayoutProperties } from '../../types/layouts.types';
-import { isPrivateRoute, PrivacyType, RouteProperties } from "../../types/routes.types";
+import { isPrivateRoute, isSessionRoute, PrivacyType, RouteProperties } from "../../types/routes.types";
 import Error403 from "../../pages/Error403";
 
 interface SmartRouterProperties<T = ReactNode> {
@@ -26,6 +26,14 @@ const SmartRoute: FC<SmartRouterProperties> = ({
    */
   if (isPrivateRoute(privacy) && !authenticated) {
     return <Layout Page={Error403} route={route} />
+  }
+
+  /**
+   * Если маршрут ссесия и пользователь авторизован,
+   * делать редирект на панель управления
+   */
+  if (isSessionRoute(privacy) && authenticated) {
+    return <Redirect to='/dashboard'/>
   }
 
   /**
