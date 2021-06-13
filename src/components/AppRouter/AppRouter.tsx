@@ -4,7 +4,7 @@ import Error404 from '../../pages/Error404';
 import rootRoutes from '../../routes';
 import SmartRoute from '../SmartRoute';
 
-const Router = () => {
+const AppRouter = () => {
   return (
     <BrowserRouter>
       <Switch>
@@ -36,4 +36,4 @@ const Router = () => {
   );
 };
 
-export default Router;
+export default AppRouter;
