@@ -1,8 +1,9 @@
 import { publicRoutes } from './public.routes';
-import DefaultLayout from '../layouts/DefaultLayout';
 import { PrivacyType, RootRouteProperties } from '../types/routes.types';
 import { privateRoutes } from './private.routes';
 import { sessionRoutes } from "./session.routes";
+import DefaultLayout from '../layouts/DefaultLayout';
+import SessionLayout from "../layouts/SessionLayout";
 
 const rootRoutes: RootRouteProperties[] = [
   {
@@ -17,7 +18,7 @@ const rootRoutes: RootRouteProperties[] = [
   },
   {
     routesList: sessionRoutes,
-    layout: DefaultLayout,
+    layout: SessionLayout,
     privacy: PrivacyType.Session,
   },
 ];
