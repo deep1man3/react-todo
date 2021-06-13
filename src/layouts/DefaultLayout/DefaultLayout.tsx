@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import Appbar from '../../components/Appbar';
 import { LayoutProperties } from '../../types/layouts.types';
+import Navbar from "../../components/Navbar";
 
 const DefaultLayout: FC<LayoutProperties> = ({ Page, route }) => {
   return (
     <div>
-      <Appbar>DefaultLayout</Appbar>
+      <Navbar>DefaultLayout</Navbar>
       <Page route={route} />
     </div>
   );
