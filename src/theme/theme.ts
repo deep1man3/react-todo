@@ -1,12 +1,15 @@
-import { createMuiTheme, ThemeOptions } from "@material-ui/core";
+/* eslint-disable */
+import { createMuiTheme } from '@material-ui/core';
 
-interface MuiThemeOptions extends ThemeOptions {
-  drawer?: {
-    width: number;
-  };
+declare module '@material-ui/core/styles/createMuiTheme' {
+  export interface ThemeOptions {
+    drawer: {
+      width: number;
+    };
+  }
 }
 
-const theme: MuiThemeOptions = {
+const theme = {
   drawer: {
     width: 280,
   },
