@@ -1,7 +1,8 @@
 import React from 'react';
+import MainContainer from '../../components/MainContainer';
 
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return <MainContainer>Dashboard</MainContainer>;
 };
 
 export default Dashboard;
