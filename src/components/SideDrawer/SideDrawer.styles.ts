@@ -6,6 +6,5 @@ export const useStyles = makeStyles((theme: any) => ({
   },
   drawerPaper: {
     width: theme.drawer.width,
-    padding: theme.spacing(3)
   },
 }));
